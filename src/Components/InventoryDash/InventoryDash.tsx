@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { User } from "../UserDash/User";
+import { Product, User } from "../UserDash/User";
 import { Edit, Trash2 } from "lucide-react"; // Make sure to import icons if used
 
 interface InventoryDashProps {
@@ -31,12 +31,12 @@ const InventoryDash: React.FC<InventoryDashProps> = ({ allData }) => {
     // Implement add product logic here
   };
 
-  const handleProductClick = (product: any) => {
+  const handleProductClick = (product: Product) => {
     // Implement product click logic here
     console.log("Product clicked:", product);
   };
 
-  const handleEditProduct = (product: any) => {
+  const handleEditProduct = (product: Product) => {
     // Implement edit product logic here
     console.log("Product clicked:", product);
   };
@@ -56,7 +56,7 @@ const InventoryDash: React.FC<InventoryDashProps> = ({ allData }) => {
     }
     acc[product.id].userCount += 1;
     return acc;
-  }, {} as Record<string, { id: number; name: string; type: string; value: number; quantity: number; sku: string; status: string; data: any[]; userCount: number }>);
+  }, {} as Record<string, Product & { userCount: number }>);
 
   // Convert to array for rendering
   const productList = Object.values(productUserCount);
