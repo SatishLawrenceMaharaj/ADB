@@ -4,10 +4,14 @@ import { useRouter } from "next/navigation"; // Import useRouter
 import { X, Edit, Trash2 } from "lucide-react";
 
 // Define a type for user
-import { User } from "./User";
+import { User, UserData } from "./User";
 import { BlankData } from "./BlankData";
 
-const UserDash = ({ usersData = [] }) => {
+interface UserDashProps {
+  usersData: User[];
+}
+
+const UserDash: React.FC<UserDashProps> = ({ usersData }) => {
   const router = useRouter(); // Initialize useRouter
   const [users, setUsers] = useState<User[]>(usersData);
   const [filteredUsers, setFilteredUsers] = useState<User[]>([]);
