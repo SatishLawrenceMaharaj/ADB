@@ -38,6 +38,11 @@ const UserProfile = ({ params }: { params: { userId: string } }) => {
     (user) => user.id === Number(userId)
   );
 
+  // State management for selected chart type and data
+  const [selectedChartType, setSelectedChartType] =
+    useState<string>("Bar Chart");
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
   if (!user) {
     return (
       <div className="max-w-3xl mx-auto mt-8 bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
@@ -52,11 +57,6 @@ const UserProfile = ({ params }: { params: { userId: string } }) => {
   }
 
   const center: [number, number] = [user.location.lat, user.location.lng];
-
-  // State management for selected chart type and data
-  const [selectedChartType, setSelectedChartType] =
-    useState<string>("Bar Chart");
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   // Calculate total quantity and value
   const totalQuantity = user.products.reduce(
