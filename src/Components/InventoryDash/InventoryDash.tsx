@@ -33,14 +33,17 @@ const InventoryDash: React.FC<InventoryDashProps> = ({ allData }) => {
 
   const handleProductClick = (product: any) => {
     // Implement product click logic here
+    console.log("Product clicked:", product);
   };
 
   const handleEditProduct = (product: any) => {
     // Implement edit product logic here
+    console.log("Product clicked:", product);
   };
 
   const handleDeleteProduct = (productId: number) => {
     // Implement delete product logic here
+    console.log("Product deleted:", productId);
   };
 
   // Flatten all products into a single array for table display

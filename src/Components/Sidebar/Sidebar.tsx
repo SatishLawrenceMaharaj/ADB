@@ -5,12 +5,10 @@ import {
   Archive,
   BarChart2,
   BicepsFlexed,
-  Layout,
   LucideIcon,
   Menu,
   Settings,
   SlidersHorizontal,
-  User,
   Users,
 } from "lucide-react";
 import Link from "next/link";

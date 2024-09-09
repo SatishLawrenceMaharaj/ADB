@@ -7,7 +7,7 @@ import { X, Edit, Trash2 } from "lucide-react";
 import { User } from "./User";
 import { BlankData } from "./BlankData";
 
-const UserDash = ({ usersData = [] }: any) => {
+const UserDash = ({ usersData = [] }) => {
   const router = useRouter(); // Initialize useRouter
   const [users, setUsers] = useState<User[]>(usersData);
   const [filteredUsers, setFilteredUsers] = useState<User[]>([]);
