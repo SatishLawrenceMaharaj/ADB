@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation"; // Import useRouter
 import { X, Edit, Trash2 } from "lucide-react";
 
 // Define a type for user
-import { User, UserData } from "./User";
+import { User } from "./User";
 import { BlankData } from "./BlankData";
 
 interface UserDashProps {
