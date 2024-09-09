@@ -34,3 +34,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Explicitly include CSS files
+!src/styles/**/*.css
+!public/styles/**/*.css
+

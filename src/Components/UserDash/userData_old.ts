@@ -11,7 +11,7 @@ export const usersData = [
     registrationDate: "2023-06-15",
     totalOrders: 45,
     activityData: [
-      { date: "2024-09-05", loginCount: 5, engagementTime: 120 },
+      { date: "2024-09-04", loginCount: 5, engagementTime: 120 },
       { date: "2024-09-06", loginCount: 3, engagementTime: 75 },
     ],
   }, 
