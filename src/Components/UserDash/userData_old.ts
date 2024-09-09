@@ -14,10 +14,10 @@ export const usersData = [
       { date: "2024-09-05", loginCount: 5, engagementTime: 120 },
       { date: "2024-09-06", loginCount: 3, engagementTime: 75 },
     ],
-  },
+  }, 
   {
     id: 2,
-    name: "Jane Smith",
+    name: "Jan Smith",
     status: "inactive",
     inventoryValue: 300,
     lastLogin: "2024-09-01",
